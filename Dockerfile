@@ -2,11 +2,10 @@ FROM randomparity/docker-supervisor:latest
 
 MAINTAINER David Christensen <randomparity@gmail.com>
 
-ENV LAST_UPDATE_PLEX 2015-01-13
+ENV LAST_UPDATE_PLEX 2015-01-14
 
-# Install required tools
-RUN apt-get -qy install \
-    avahi-daemon avahi-utils software-properties-common 
+# Install prerequisites
+RUN apt-get -qy install avahi-daemon avahi-utils 
 
 # Fetch the Plex package
 ADD https://downloads.plex.tv/plex-media-server/0.9.11.7.803-87d0708/plexmediaserver_0.9.11.7.803-87d0708_amd64.deb \
