@@ -1,0 +1,1 @@
+docker run -d --restart always --net="host" --name plex -v /mnt/docker/plex:/config -v /mnt/docker/media:/media:ro -v /etc/localtime:/etc/localtime:ro -v /etc/apt/apt-conf.d/01proxy:/etc/apt/apt-conf.d/01proxy:ro randomparity/docker-plex:latest
