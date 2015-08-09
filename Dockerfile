@@ -1,7 +1,7 @@
 FROM randomparity/docker-supervisor:latest
 MAINTAINER David Christensen <randomparity@gmail.com>
 
-ENV PLEX_LAST_UPDATE 2015-08-01
+ENV PLEX_LAST_UPDATE 2015-08-09
 
 # Install prerequisites
 RUN DEBIAN_FRONTEND=noninteractive apt-get -q update && \
@@ -10,7 +10,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -q update && \
     avahi-daemon avahi-utils 
 
 # Fetch the Plex package
-ADD https://downloads.plex.tv/plex-media-server/0.9.12.7.1356-7f37aa9/plexmediaserver_0.9.12.7.1356-7f37aa9_amd64.deb \
+ADD https://downloads.plex.tv/plex-media-server/0.9.12.8.1362-4601e39/plexmediaserver_0.9.12.8.1362-4601e39_amd64.deb \
     /tmp/plex.deb
 
 # Install Plex and clean-up any unneeded files
